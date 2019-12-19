@@ -1,34 +1,22 @@
 import React from "react"
 
 class Squares extends React.Component { 
-    constructor(){ 
-        super()
-        this.state = { 
-            color: ["blue", "purple", "blue", "blue"]
-        }
-    }
-    changeSquareColor(){ 
-        this.setState({ 
-            color: this.state.color[0]
-        })
-        console.log("fired")
-    }
 
+   
     render(){ 
-       const squareColor = { 
-            display: "inline-block",
-            border: "1px solid black",
-            backgroundColor: "red",
-            width: "200px",
+        const squareStyle = { 
+            gridRow: this.props.gridRow,
+            gridColumn: this.props.gridColumn,
             height: "200px",
-    
+            width: "auto",
+            backgroundColor: this.props.color,
+            border: "1px solid black"
         }
+    
+        
         return (
             <div>
-                <div style = {squareColor} onClick = {this.changeSquareColor.bind(this)}></div>
-                <div style = {squareColor} onClick = {this.changeSquareColor.bind(this)}></div>
-                <div style = {squareColor} onClick = {this.changeSquareColor.bind(this)}></div>
-                <div style = {squareColor} onClick = {this.changeSquareColor.bind(this)}></div>
+                <div style={squareStyle}></div>
             </div>
         
         )

@@ -1,6 +1,5 @@
 import React from "react"
 
-
 class Dice extends React.Component {
     constructor(){ 
         super()
@@ -9,11 +8,12 @@ class Dice extends React.Component {
          }
     }
     rollOneDice(){ 
-        this.setState({ 
-            number: Math.floor(Math.random() * 6) + 1
-        })
+        this.setState(() => { 
+            console.log('pre', this.state.number)
+            return {number: Math.floor(Math.random() * 6) + 1, fun: ((ele) => {console.log("we are fun")})()}
+        }, () => console.log("We are jhere: ", this.state.number))
            
-        console.log(this.state.number)
+        console.log("bob:", this.state.number)
     }
 
     handleChange(){ 
@@ -21,7 +21,7 @@ class Dice extends React.Component {
         this.setState(prevState => {
             return{
                 number: prevState.number
-                
+
                 
             }
             

@@ -1,0 +1,113 @@
+*{ 
+    margin: 0;
+}
+.App{ 
+    min-height: 100%;
+    position: relative;
+}
+.light-nav-bar{ 
+    font-size: large;
+    display:flex;
+    justify-content: space-evenly;
+    background-color: lightgray;
+    width: 100%;
+}
+
+.light-main-body{ 
+    display:flex;  
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.light-footer{ 
+    position: absolute;
+    bottom: 0;
+    height:15pt;
+    text-align:center;
+    background-color:lightgray;
+    width: 100%
+}
+.light-button{ 
+    border-radius: 5%;
+    height: 3em; 
+    width: fit-content;
+    background-color:gray;
+    display:block;
+}
+
+.dark-nav-bar{ 
+    font-size: large;
+    display:flex;
+    justify-content: space-evenly;
+    color: white;
+    background-color: darkslategrey;
+    width: 100%;
+}
+
+.dark-main-body{ 
+    display:flex;  
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+
+}
+.dark-footer{ 
+    position: absolute;
+    bottom: 0;
+    height:15pt;
+    text-align:center;
+    color: white;
+    background-color:darkslategrey;
+    width: 100%
+}
+.dark-button{ 
+    border-radius: 5%;
+    height: 3em; 
+    width: fit-content;
+    color: white;
+    background-color:darkslategrey;
+    display:block;
+}
+.goofy-nav-bar{ 
+    font-size: large;
+    display:flex;
+    justify-content: space-evenly;
+    color: white;
+    background-color: purple;
+    width: 100%;
+}
+
+.goofy-main-body{ 
+    display:flex;  
+    justify-content: center;
+    align-items: center;
+    color:black;
+    background-color: yellow;
+    width: 100%;
+    height: 100vh;
+
+}
+.goofy-footer{ 
+    position: absolute;
+    bottom: 0;
+    height:15pt;
+    text-align:center;
+    color: black;
+    background-color:orange;
+    width: 100%
+}
+.goofy-button{ 
+    border-radius: 5%;
+    height: 3em; 
+    width: fit-content;
+    color: saddlebrown;
+    background-color:hotpink;
+    display:block;
+}

@@ -12,10 +12,11 @@ h5{
     flex-direction: row;
     flex-wrap: wrap;
 }
-.item{ 
+.item{
     margin: 10pt;
     background-color:white ;
     text-align: center;
+    color: black;
    
 
 }

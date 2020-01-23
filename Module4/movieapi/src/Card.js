@@ -9,6 +9,7 @@ function Card(){
         <div className = "card"> 
         <Switch>
             <Route exact path = "/details">
+            
                 <MovieDetails />
             </Route>
             <Route exact path = "/">

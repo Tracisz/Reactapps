@@ -59,7 +59,7 @@ class MovieContextProvider extends Component{
         e.preventDefault()
         let movieChoice = e.target.name
         console.log(movieChoice)
-        fetch(`http://www.omdbapi.com/?apikey=1c37308b&i=${movieChoice}`)
+        fetch(`http://www.omdbapi.com/?apikey=1c37308b&i=${movieChoice}&plot=full`)
         .then(res => res.json())
         .then((result) => {
         this.setState({

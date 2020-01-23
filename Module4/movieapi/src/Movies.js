@@ -3,6 +3,10 @@ import {Switch, Route, withRouter} from "react-router-dom";
 import "./index.css"
 import { MovieContextConsumer } from "./movieContext";
 import MovieDetails from "./MovieDetails";
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Badge from 'react-bootstrap/Badge'
+
 
 class Movies extends Component{
   render(){
@@ -20,11 +24,11 @@ class Movies extends Component{
                     <p></p>
                     <img alt = "404 not found" src = {movie.Poster}></img>
                     <br></br>
-                      <form>
-                        <button to = "/details" onClick = {(e) => {
+                      <form className = "button" >
+                        <Button variant = "outline-dark" bsClass = "button" to = "/details" onClick = {(e) => {
                           handleChoice(e) 
                           this.props.history.push("/details")
-                        }} name = {movie.imdbID} >See More</button>
+                        }} name = {movie.imdbID} >See More</Button>
                       </form>
                         <Switch>
                           <Route exact path = "/details">
@@ -34,9 +38,15 @@ class Movies extends Component{
                   </div>
                     ))}
             </div>
-            <div className = "card-children"> page {count}</div>
-            <button className = "card-children" onClick = {previousPage}>Previous Page</button>
-            <button className = "card-children" onClick = {nextPage}>Next Page</button>
+             
+            <div className = "button-group">
+              <Button className = "card-children" variant="outline-info" disabled>
+                Page <Badge variant="dark">{count}</Badge>
+                <span className="sr-only">Current Page</span>
+              </Button>
+              <Button variant = "secondary" onClick = {previousPage}>Previous Page</Button>
+              <Button variant = "primary"  onClick = {nextPage}>Next Page</Button>
+            </div>  
           </div> 
           )}
         </MovieContextConsumer>

@@ -1,6 +1,12 @@
 import React, { Component } from "react"
 import "./index.css"
 import { MovieContextConsumer } from "./movieContext"
+import Button from 'react-bootstrap/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 class Movielist extends Component{
     render(){
@@ -12,13 +18,20 @@ class Movielist extends Component{
                         <center><h1 className = "card-children">Search a movie</h1></center>
                         <center>
                             <form onSubmit = {handleSubmit} className = "card-children">
-                                <input className = "card-children"
+                                <InputGroup bsPrefix = "input" className="mb-3">
+                                    <FormControl
+                                    placeholder="Search"
+                                    aria-label="Searcg"
+                                    aria-describedby="basic-addon2"
                                     type = "text"
-                                    placeholder = "Search"
                                     value = {movieSearch}
                                     name = "movieSearch"
-                                    onChange={handleChange}/>
-                                <button className = "card-children">Submit</button>
+                                    onChange = {handleChange}
+                                    />
+                                    <InputGroup.Append>
+                                    <Button onClick = {handleSubmit} variant="outline-secondary" >Submit</Button>
+                                    </InputGroup.Append>
+                                </InputGroup>
                             </form>
                         </center>
                     </>

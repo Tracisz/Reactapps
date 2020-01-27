@@ -11,7 +11,7 @@ import Badge from 'react-bootstrap/Badge'
 class Movies extends Component{
   render(){
   return (
-    <div>
+    <div className = "card-children">
       <MovieContextConsumer>
         {({handleChoice, movieList, count, nextPage, previousPage}) => (
           <div className = "card-children">
@@ -44,7 +44,7 @@ class Movies extends Component{
                 Page <Badge variant="dark">{count}</Badge>
                 <span className="sr-only">Current Page</span>
               </Button>
-              <Button variant = "secondary" onClick = {previousPage}>Previous Page</Button>
+              <Button bsPrefix = "page-button" variant = "secondary" onClick = {previousPage}>Previous Page</Button>
               <Button variant = "primary"  onClick = {nextPage}>Next Page</Button>
             </div>  
           </div> 

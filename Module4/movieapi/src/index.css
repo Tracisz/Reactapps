@@ -1,7 +1,7 @@
 *{ 
     margin: 0pt; 
     background-color: whitesmoke;
-    font-family: "Roboto"
+    font-family: "Roboto";
 } 
 
 h5{ 
@@ -27,6 +27,7 @@ h5{
     top:0%;
     left: 2.5%;
     z-index: 1;
+    min-height:1000pt;
     height: 100%;
     width: 95vw;
     background-color: white;
@@ -38,6 +39,7 @@ h5{
 .card-children{ 
     background-color: white;
     margin: 0pt;
+    
 }
  .img{ 
      width:100%;
@@ -78,5 +80,8 @@ h5{
 }
 
 .button-group{ 
-    display: inline-flex;
+    display:inline-flex;
+    position: static;
+    bottom: 0%;
 }
+

@@ -21,7 +21,7 @@ class Movielist extends Component{
                                 <InputGroup bsPrefix = "input" className="mb-3">
                                     <FormControl
                                     placeholder="Search"
-                                    aria-label="Searcg"
+                                    aria-label="Search"
                                     aria-describedby="basic-addon2"
                                     type = "text"
                                     value = {movieSearch}

@@ -1,7 +1,5 @@
 import * as React from "react";
 import "./index.css"
-
-// const crypto = require('crypto')
 const crypto = require("crypto")
 
 
@@ -36,17 +34,8 @@ export class FileSelector extends React.Component
            
 
         }
-        // reader.onload = function (event) {
-        //     var data = event.target.result;
-        //     var encrypted = CryptoJS.SHA256( data );
-        //     console.log('encrypted: ' + encrypted);
         };
-        // reader.readAsBinaryString(file);
-        // const pwd = selectorFiles[0], 
-        // hashPwd = crypto.createHash('sha256')
-        // .update(pwd)
-        // .digest('hex')
-        // console.log(hashPwd);
+     
     
 
     render ()

@@ -9,8 +9,7 @@ h5{
 }
 
 .flex-container{ 
-    display:inline-flex; 
-    flex-direction: row;
+    display:flex; 
     flex-wrap: wrap;
 }
 .item{
@@ -27,8 +26,8 @@ h5{
     top:0%;
     left: 2.5%;
     z-index: 1;
-    min-height:1000pt;
-    height: 100%;
+    min-height:1100pt;
+    height: 110%;
     width: 95vw;
     background-color: white;
     opacity: 1;
@@ -81,7 +80,7 @@ h5{
 
 .button-group{ 
     display:inline-flex;
-    position: static;
+    position: relative;
     bottom: 0%;
 }
 

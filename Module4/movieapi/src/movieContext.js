@@ -18,7 +18,7 @@ class MovieContextProvider extends Component{
     }
     handleSubmit = (e) => {
         e.preventDefault()
-        fetch(`http://www.omdbapi.com/?apikey=1c37308b&s=${this.state.movieSearch}`)
+        fetch(`https://www.omdbapi.com/?apikey=1c37308b&s=${this.state.movieSearch}`)
             .then(res => res.json())
             .then((result) => {
                   this.setState({
@@ -29,7 +29,7 @@ class MovieContextProvider extends Component{
                 .catch(err => console.log(err))
     }
     nextPage = () => {
-        fetch(`http://www.omdbapi.com/?apikey=1c37308b&s=${this.state.movieSearch}&page=${this.state.count + 1}`)
+        fetch(`https://www.omdbapi.com/?apikey=1c37308b&s=${this.state.movieSearch}&page=${this.state.count + 1}`)
             .then(res => res.json())
             .then((result) => { 
                 this.setState((prevState) => {
@@ -42,7 +42,7 @@ class MovieContextProvider extends Component{
         
     }
     previousPage = () => {
-        fetch(`http://www.omdbapi.com/?apikey=1c37308b&s=${this.state.movieSearch}&page=${this.state.count - 1}`)
+        fetch(`https://www.omdbapi.com/?apikey=1c37308b&s=${this.state.movieSearch}&page=${this.state.count - 1}`)
             .then(res => res.json())
             .then((result) => { 
                 this.setState((prevState) => {
@@ -59,7 +59,7 @@ class MovieContextProvider extends Component{
         e.preventDefault()
         let movieChoice = e.target.name
         console.log(movieChoice)
-        fetch(`http://www.omdbapi.com/?apikey=1c37308b&i=${movieChoice}&plot=full`)
+        fetch(`https://www.omdbapi.com/?apikey=1c37308b&i=${movieChoice}&plot=full`)
         .then(res => res.json())
         .then((result) => {
         this.setState({

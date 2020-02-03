@@ -1,7 +1,7 @@
 .file-reader {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     position: relative; 
-    text-align: center;
+    text-align: center;  
+    top: 45vh;
 }       
-
